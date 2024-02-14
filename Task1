@@ -1,1 +1,74 @@
+list1=[]
+def enter():
+    b=input("enter the task")
+    c="not completed"
+    list1.append(b)
+    list1.append(c)
+    print()
+    input1()
 
+def show():
+    if len(list1)== 0:
+        print ("no data found")
+        input1()
+    j=1
+    for i in range(0,len(list1),2):
+        print(j , " -> ",list1[i] , "-",list1[i+1])
+        j=j+1
+    print()
+    input1()
+
+def show1():
+    j=1
+    for i in range(0,len(list1),2):
+        print(j , " -> ",list1[i] , "-",list1[i+1])
+        j=j+1
+    print()
+
+def mark():
+    if len(list1)== 0:
+        print ("no data found")
+        input1()
+    print()
+    show1()
+    b=int(input("enter the number want to mark as complete"))
+    list1[(2*b)-1]="complete"
+    input1()
+
+def remove():
+    if len(list1)== 0:
+        print ("no data found")
+        input1()
+    print()
+    show1()
+    b=int(input("enter the number to remove the task from the list"))
+    list1.pop((2*b)-1)
+    list1.pop((2*b)-2)
+    input1()
+   
+def input1():
+    print ("1 -> Enter the new task")
+    print ("2 -> Display the task")
+    print ("3 -> mark as completed task")
+    print ("4 -> remove the taske from the list")
+    print ("5 -> exit")
+    a = int(input("enter the choice"))
+    match a:
+        case 1:
+            print()
+            enter()
+        case 2:
+            print()
+            show()
+        case 3:
+            print()
+            mark()
+        case 4:
+            print()
+            remove()
+        case 5:
+            print()
+            print("exit")
+        case _:
+            print("You have enterd wrong choice")
+input1()
