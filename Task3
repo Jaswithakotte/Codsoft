@@ -1,1 +1,28 @@
-
+import random
+import string
+upper=string.ascii_uppercase
+lower=string.ascii_lowercase
+digit=string.digits
+symbol=string.punctuation
+upper_len=int(input("Enter the length of upper case letters"))
+lower_len=int(input("Enter the length of lower case letters"))
+digit_len=int(input("Enter the length of digits"))
+symbol_len=int(input("Enter the length of symbols"))
+password=[]
+for i in range(upper_len):
+    pwd=random.choice(upper)
+    password+=pwd
+for i in range(lower_len):
+    pwd=random.choice(lower)
+    password+=pwd
+for i in range(digit_len):
+    pwd=random.choice(digit)
+    password+=pwd
+for i in range(symbol_len):
+    pwd=random.choice(symbol)
+    password+=pwd
+random.shuffle(password)
+pswd=""
+for i in password:
+    pswd+=i
+print(pswd)
