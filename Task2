@@ -1,1 +1,28 @@
-
+import sys
+while True:
+    a= int(input("enter the first number "))
+    b= int(input("enter the second number")) 
+    print("***************************")
+    print("1. Addition")
+    print("2. Subtraction")
+    print("3. Multiplication")
+    print("4. Division")
+    print("5. Exit")
+    c = int(input("enter the choice"))
+    match (c):
+        case 1:
+            print("Addition result is : ",a+b)
+        case 2:
+            print("Subtraction result is : ",a-b)
+        case 3:
+            print("Multiplication result is : ",a*b)
+        case 4:
+            print("Division result is : ",a/b)
+        case 5:
+            print("exit")
+        case _:
+            print ("wrong choice")
+    if c >= 5 :
+        sys.exit()
+    print("***************************")
+    print("\n")
